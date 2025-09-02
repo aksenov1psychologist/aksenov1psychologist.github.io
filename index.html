@@ -7,17 +7,17 @@
   <title>Александр Аксенов — спокойные деньги без хаоса</title>
   <meta name="description" content="Психология трейдинга, аудит финансовых привычек, перезапуск после утрат, онкоподдержка, «Финансовое зеркало». Быстрая запись в Telegram." />
 
-  <!-- Open Graph (для красивых превью при расшаривании) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Александр Аксенов — спокойные деньги без хаоса" />
   <meta property="og:description" content="Бережная работа с деньгами, трейдингом, утратами и онкодиагнозом. Запись в Telegram." />
   <meta property="og:url" content="https://aksenov1psychologist.github.io/" />
-  <meta property="og:image" content="og.jpg" /> <!-- положи файл og.jpg в корень репозитория -->
+  <meta property="og:image" content="og.jpg" />
 
-  <!-- Иконка вкладки (эмодзи) -->
+  <!-- Favicon-эмодзи -->
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💬</text></svg>'>
 
-  <!-- Структурированные данные -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -31,54 +31,81 @@
   </script>
 
   <style>
-    :root{--mx:980px;--pad:24px;--radius:12px}
+    :root{--mx:980px;--pad:24px;--radius:12px;--ink:#111;--muted:#666;--line:#eee;--brand:#1f7a6b}
     *{box-sizing:border-box}
-    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#111;background:#fafafa;padding-bottom:66px}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:#fafafa;padding-bottom:66px}
     .wrap{max-width:var(--mx);margin:0 auto;padding:var(--pad)}
     h1{font-size:28px;margin:0 0 10px}
     h2{font-size:22px;margin:22px 0 10px}
     p.lead{font-size:18px;color:#333;margin:6px 0 0}
-    .card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:18px;margin:16px 0}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin:16px 0}
     .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:#111;color:#fff;text-decoration:none;margin-top:8px;border:1px solid #111;transition:.2s}
     .btn:hover{transform:translateY(-1px)}
     .btn.alt{background:#fff;color:#111}
     .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .muted{color:#666;font-size:14px}
+    .muted{color:var(--muted);font-size:14px}
     code.k{background:#f2f2f2;padding:6px 10px;border-radius:8px;display:inline-block;word-break:break-all}
+    footer{padding:20px var(--pad);color:#666;font-size:14px;text-align:center}
+    /* Шапка/навигация */
+    .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:9}
+    .nav{max-width:var(--mx);margin:0 auto;padding:10px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-weight:800;color:var(--ink);text-decoration:none}
+    .nav ul{list-style:none;display:flex;gap:14px;margin:0;padding:0}
+    .nav a{color:var(--ink);text-decoration:none}
+    .nav a:hover{color:var(--brand)}
     /* Липкая панель CTA */
     .stickycta{position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:10px 14px;display:flex;gap:10px;justify-content:center;align-items:center;z-index:999;border-top:1px solid #333;font-size:15px}
     .stickycta a{background:#fff;color:#111;padding:10px 16px;border-radius:8px;text-decoration:none;border:1px solid #111}
-    footer{padding:20px var(--pad);color:#666;font-size:14px;text-align:center}
+    /* Мелочи */
+    .badge{display:inline-block;background:#e8f3f1;color:var(--brand);padding:3px 8px;border-radius:999px;font-size:12px;margin-right:6px}
+    .hr{height:1px;background:var(--line);margin:10px 0}
+    @media (max-width:640px){ h1{font-size:24px} }
   </style>
 </head>
 <body>
+
+  <!-- Шапка -->
+  <header class="site-header">
+    <div class="nav">
+      <a class="logo" href="/">Александр Аксенов</a>
+      <ul>
+        <li><a href="/products.html">Продукты</a></li>
+        <li><a href="/about.html">Обо мне</a></li>
+        <li><a href="#pay">Оплата</a></li>
+        <li><a href="https://t.me/Aleks_first" target="_blank" rel="noopener">Telegram</a></li>
+      </ul>
+    </div>
+  </header>
+
   <div class="wrap">
     <h1>Спокойные деньги без хаоса</h1>
     <p class="lead">5 форматов онлайн-работы. Отвечаю лично. Время связи: 10:00–20:00 UTC+3 (Москва).</p>
 
-    <!-- Продукты -->
+    <!-- Продукты (оставляем на главной как витрину; подробности — на /products.html) -->
     <div class="card">
-      <h2>1) Психология трейдинга • 60 минут</h2>
+      <span class="badge">1</span><h2 style="display:inline">Психология трейдинга • 60 минут</h2>
       <p>Диагностика FOMO и «сделок из мести», 3 персональных правила на 14 дней, дневник сделок.</p>
       <div class="stack">
         <a class="btn" target="_blank" rel="noopener"
            href="https://t.me/Aleks_first?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D1%82%D1%80%D0%B5%D0%B9%D0%B4%D0%B8%D0%BD%D0%B3%D1%83">Записаться</a>
+        <a class="btn alt" href="/products.html">Все форматы</a>
       </div>
       <p class="muted"> 1 сеанс 5 990 ₽ · 2 сеанса 9 990 ₽</p>
     </div>
 
     <div class="card">
-      <h2>2) Аудит финансовых привычек • 90 минут</h2>
+      <span class="badge">2</span><h2 style="display:inline">Аудит финансовых привычек • 90 минут</h2>
       <p>Снимок реальности без стыда → план на 30 дней. Сеанс + чек-лист.</p>
       <div class="stack">
         <a class="btn" target="_blank" rel="noopener"
            href="https://t.me/Aleks_first?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2">Записаться</a>
+        <a class="btn alt" href="/products.html">Все форматы</a>
       </div>
       <p class="muted"> 1 сеанс 7 990 ₽ · 2 сеанса 12 990 ₽</p>
     </div>
 
     <div class="card">
-      <h2>3) Поддержка при онкологическом диагнозе • 90 мин</h2>
+      <span class="badge">3</span><h2 style="display:inline">Поддержка при онкологическом диагнозе • 90 мин</h2>
       <p>Для пациентов и близких. Работаем на улучшение качества жизни на любой стадии.</p>
       <ul>
         <li>Снижение тревоги; сон/аппетит; мягкий режим дня.</li>
@@ -88,28 +115,29 @@
       <div class="stack">
         <a class="btn" target="_blank" rel="noopener"
            href="https://t.me/Aleks_first?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D1%83%20%D0%BF%D1%80%D0%B8%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D0%B7%D0%B5">Записаться</a>
-        <a class="btn alt" target="_blank" rel="noopener"
-           href="https://t.me/Aleks_first?text=%D0%9E%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%2010%20%D0%BC%D0%B8%D0%BD%20%D0%BF%D0%BE%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D0%B7%D1%83">10-мин ориентир (бесплатно)</a>
+        <a class="btn alt" href="/products.html">Все форматы</a>
       </div>
       <p class="muted">5 900 ₽ · пакет 2×/неделю: 10 000 ₽. Не является медицинской услугой.</p>
     </div>
 
     <div class="card">
-      <h2>4) Перезапуск после утрат • Сеанс + план</h2>
+      <span class="badge">4</span><h2 style="display:inline">Перезапуск после утрат • Сеанс + план</h2>
       <p>Мягкие ежедневные практики, «маятник» минус→ресурс, чек-лист заботы.</p>
       <div class="stack">
         <a class="btn" target="_blank" rel="noopener"
            href="https://t.me/Aleks_first?text=%D0%9F%D0%B5%D1%80%D0%B5%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%20%D1%83%D1%82%D1%80%D0%B0%D1%82">Записаться</a>
+        <a class="btn alt" href="/products.html">Все форматы</a>
       </div>
       <p class="muted">1сеанс+план на 14дней 5 990 ₽ · 2сеанса + план 9 990 ₽</p>
     </div>
 
     <div class="card">
-      <h2>5) «Финансовое зеркало» • 90 мин + план на 30 дней</h2>
+      <span class="badge">5</span><h2 style="display:inline">«Финансовое зеркало» • 90 мин + план на 30 дней</h2>
       <p>Глубокий разбор убеждений → выбор одного фокуса → план на 30 дней. Скрипты первых шагов.</p>
       <div class="stack">
         <a class="btn" target="_blank" rel="noopener"
            href="https://t.me/Aleks_first?text=%D0%A4%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B7%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D0%BE">Записаться</a>
+        <a class="btn alt" href="/products.html">Все форматы</a>
       </div>
       <p class="muted">14 900 ₽ · VIP: 24 900 ₽</p>
     </div>
@@ -138,11 +166,11 @@
       <p class="muted">Материалы образовательные и не являются финансовыми/медицинскими рекомендациями.</p>
     </div>
 
-    <!-- Обо мне -->
+    <!-- Обо мне (тизер) -->
     <div class="card">
       <h2>Обо мне</h2>
       <p>Я психолог экзистенциалист. Работаю с темами денег, трейдинга, утрат и онкоподдержки. Инженерный бэкграунд и опыт eBay/Etsy/трейдинга/wb помогают говорить о сложном просто и по делу.</p>
-      <p class="muted">Конфиденциальность. Бережный подход. Работаю онлайн (часовой пояс UTC+3 (Москва)).</p>
+      <p class="muted">Конфиденциальность. Бережный подход. Работаю онлайн (UTC+3). <a href="/about.html">Подробнее обо мне →</a></p>
     </div>
 
     <!-- FAQ -->
@@ -163,7 +191,7 @@
   </div>
 
   <footer>
-    © <span id="y"></span> Александр Аксенов
+    © <span id="y"></span> Александр Аксенов · <a href="/about.html">Обо мне</a> · <a href="/products.html">Продукты</a>
   </footer>
 
   <script>
@@ -171,7 +199,8 @@
       const t=document.getElementById('addr').innerText.trim();
       navigator.clipboard.writeText(t).then(()=>alert('Адрес USDT скопирован'));
     }
-    document.getElementById('y').textContent=(new Date()).getFullYear();
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
