@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Обо мне — Александр Аксенов</title>
+  <meta name="description" content="Психолог-практик. Простой язык, работающие техники, бережный формат."/>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💬</text></svg>'>
+  <style>
+    :root{--mx:980px;--pad:24px;--line:#eee;--ink:#111;--muted:#666}
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:#fafafa}
+    .wrap{max-width:var(--mx);margin:0 auto;padding:var(--pad)}
+    .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:9}
+    .nav{max-width:var(--mx);margin:0 auto;padding:10px var(--pad);display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:800;color:#111;text-decoration:none}
+    .nav ul{list-style:none;display:flex;gap:14px;margin:0;padding:0}
+    .nav a{color:#111;text-decoration:none}
+    .nav a:hover{color:#1f7a6b}
+    .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media(max-width:780px){.grid{grid-template-columns:1fr}}
+    .muted{color:var(--muted)}
+    img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+    footer{padding:20px var(--pad);color:#666;font-size:14px;text-align:center}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav">
+      <a class="logo" href="/">Александр Аксенов</a>
+      <ul>
+        <li><a href="/products.html">Продукты</a></li>
+        <li><a href="/about.html">Обо мне</a></li>
+        <li><a href="https://t.me/Aleks_first" target="_blank" rel="noopener">Telegram</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card">
+      <h1>Обо мне</h1>
+      <p class="muted">Психолог-практик. Простой язык, рабочие техники, бережный формат.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Коротко</h2>
+        <ul>
+          <li>Работаю с тревогой, FOMO и выгоранием через «микрошаги» и дневниковые практики</li>
+          <li>Для трейдеров/инвесторов — дисциплина решений и «анти-FOMO»</li>
+          <li>Поддерживаю при онкодиагнозе и после утрат: улучшаем качество жизни</li>
+          <li>Инженерный бэкграунд → системный, понятный подход</li>
+        </ul>
+        <h3>Как работаем</h3>
+        <p>Созваниваемся на 50–60 минут, отмечаем точку А, выбираем 1–3 шага на неделю и фиксируем эффект. При тяжёлых симптомах рекомендую консультацию врача/психиатра параллельно.</p>
+        <div><a class="muted" href="https://t.me/Aleks_first" target="_blank" rel="noopener">Написать в Telegram →</a></div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/img/about-1.jpg" alt="Александр Аксенов — портрет"/>
+        <p class="muted" style="margin-top:8px">Загрузите фото по пути <code>/assets/img/about-1.jpg</code> (до ~1–2 МБ).</p>
+        <img src="/assets/img/about-2.jpg" alt="Александр Аксенов — работа за ноутбуком" style="margin-top:12px"/>
+      </div>
+    </div>
+  </main>
+
+  <footer>© <span id="y"></span> Александр Аксенов</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
